@@ -27,7 +27,7 @@ class LaravelFacebookPixel
      */
     public function __construct($id)
     {
-        $this->id = $id;
+        $this->id = Auth::user()->company()->pixel_id;
         $this->enabled = true;
         $this->cspNonceCallback = '';
     }
